@@ -1,0 +1,44 @@
+		#header
+		{
+			padding: 2px;			
+			background-color: #AF1F1A;
+			background-repeat-y:no-repeat;
+			height: 34px;	
+			z-index: 4;	
+			margin-bottom: 0px;			
+		}		
+
+		#logo
+		{
+			z-index: 4;
+			position: absolute;
+			left: 0px;						
+		}
+
+		aside
+		{			
+			padding: 10px;				
+		}
+
+		div
+		{
+
+			margin-bottom: 5px; 	
+		}
+
+		#contenedorSPA
+		{
+			background-color: white;
+		}
+
+		.active a
+		{
+			color:  #AF1F1A;
+			margin-left: 20px;
+			transition: width 2s;
+		}
+
+		body
+		{
+			background-color: white;
+		}
