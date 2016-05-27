@@ -1,0 +1,89 @@
+
+                  <div>
+                      <h3 class="text-center">Agregar usuario
+                      </h3>
+                  </div>
+
+                  <hr/>
+
+                  <form  novalidate name="formulario">
+
+                  <div class="form-group">
+                    <h4>Nombre:</h4>
+                    <input name="nombre" type="text" ng-model="informacion.nombre" class="form-control" id="nombres" placeholder="Ingrese nombres" required>
+
+                    {{informacion.nombre}}
+
+
+
+                  </div>
+
+                  <div class="form-group">
+                    <h4>Apellidos:</h4>
+                    <input type="text" ng-model="informacion.apellido" class="form-control" id="apellidos" placeholder="Ingrese apellidos" required>
+                  </div>
+                  <div class="form-group">
+                    <h4>Documento de identificación:</h4>
+                    <input type="number" name="documento" ng-model="informacion.id" class="form-control" id="documento" placeholder="Ingrese documento ej: 105468972"required>
+                   </div>
+                   <div class="form-group">
+                    <h4>Email:</h4>
+                    <input ng-model="informacion.email" type="email" class="form-control" id="email" placeholder="Ingrese contraseña" required>
+                  </div>
+                  <div class="form-group">
+                    <h4>Celular:</h4>
+                    <input ng-model="informacion.celular" type="tel" class="form-control" id="celular" placeholder="Ingrese contraseña" required>
+                  </div>
+                   <div class="form-group">
+                    <h4>Teléfono:</h4>
+                    <input ng-model="informacion.telefono" type="tel" class="form-control" id="telefono" placeholder="Ingrese contraseña" required>
+                  </div>
+                   <div class="form-group">
+                    <h4>Tipo de usuario:</h4>
+                      <select class="form-control" ng-model="tipo" id="tipoUsuario" required>
+                        <option>Estudiante</option>
+                        <option>Evaluador</option>
+                        <option>Asesor</option>
+                        <option>Profesor</option>
+                      </select>
+                  </div>
+                  <div ng-show="tipo == 'Estudiante'" class="form-group">
+                      <h4>Programa:</h4>
+                      <select ng-model="informacion.programa" class="form-control" id="tipoPrograma" required>
+                        <option>Ingenieria de sistemas</option>
+                      </select>
+                  </div>
+                  <div ng-show = " tipo != 'Estudiante'" class="form-group">
+                      <h4>Título:</h4>
+                      <input type="text" ng-model="informacion.titulo" class="form-control" placeholder="Ingrese su título" id="titulo"required></input>
+                  </div>
+                  <!--<div class="form-group">
+                    <h4>Contraseña:</h4>
+                    <input type="password" class="form-control" id="contraseña" placeholder="Ingrese contraseña">
+                  </div>-->
+                  <div ng-show = "tipo == 'Evaluador'" class="from-control">
+                    <h4>Empresa:</h4>
+                    <input class="form-control" ng-model="informacion.empresa" type="text"placeholder="Ingrese el nombre de la empresa en la que trabaja" id="empresa" required></input>
+                  </div>
+                  <div ng-show = "tipo == 'Profesor'" class="from-control">
+                    <h4>Curso:</h4>
+                    <input class="form-control" type = "text"placeholder="Ingrese su curso" id="curso" required></input>
+                  </div>
+                  <div ng-show = "tipo == 'Evaluador'" class="from-control">
+                    <h4>Cargo:</h4>
+                    <input class="form-control" type="text"placeholder="Ingrese su cargo" id="cargo" required></input>
+                  </div>
+                  <div ng-show = "tipo != 'Estudiante'" class="from-control">
+                    <h4>Dirección:</h4>
+                    <input class="form-control" type = "text"placeholder="Ingrese su cargo" id="direccion"required></input>
+                  </div>
+                </form>
+                <div class="modal-footer">
+                    <div class="form-group">
+                      <button ng-click="enviarUsuario()" class="btn btn-danger" id="btn_agregarUsuario">Agregar nuevo usuario</button>
+                    </div>
+                  <div class="col-md-12">
+                    <button class="btn"  id="btn_cancelar" data-dismiss="modal" aria-hidden="true">Cancelar</button>
+                  </div>  
+            </div>
+

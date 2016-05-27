@@ -1,0 +1,61 @@
+      <div>
+          <h3 class="text-center">Presentar propuesta</h3>
+      </div>
+      <div >
+          <form>
+            <!--<div class="form-group">
+              <h4>Tipo de archivo:</h4>
+              <select class="form-control input-lg" id="sel1">
+                <option>PDF</option>
+                <option>txt</option>
+                <option>exe</option>
+              </select>
+            </div>-->
+            <div class="form-group">
+              <h4>Fecha:</h4>
+              <input  ng-model="propuesta.fecha" type="date" class="datepicker form-control" name="date">
+            </div>
+            <div class="form-group">
+              <h4>Ciudad:</h4>
+              <input type="text" ng-model="propuesta.ciudad" class="form-control" placeholder="Ingrese ciudad">
+            </div>
+            <div class="form-group">
+              <h4>Tipo de investigación:</h4>
+              <input type="text" ng-model="propuesta.tipo" class="form-control" placeholder="Ingrese tipo de investigación">
+            </div>
+            <div class="form-group">
+              <h4>Titulo del trabajo:</h4>
+               <input type="text" class="form-control" ng-model="propuesta.titulo" placeholder="Ingrese titulo del trabajo">
+            </div>
+            <div class="form-group">
+              <h4>Nombre del asesor:</h4>
+              <select class="form-control" id="sel1" ng-model="propuesta.asesor">
+                <option>Nombre1</option>
+                <option>Nombre2</option>
+                <option>Nombre3</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <h4>Perfil del asesor:</h4>
+              <select class="form-control" id="sel2" ng-model="propuesta.perfil">
+                <option>Nombre1</option>
+                <option>Nombre2</option>
+                <option>Nombre3</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <h4>Adjunte el archivo:</h4>
+              <input id="archivo" type="file" class="form-control"></input>
+            </div>
+            {{propuesta}}
+          </form>
+      </div>
+      <div class="modal-footer">
+            <div class="form-group">
+              <button ng-click="prueba()" class="btn btn-danger btn-lg btn-block">Guardar y enviar</button>
+            </div>
+          <div class="col-md-12">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Guardar</button>
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Cancelar</button>
+      </div>  
+      </div>
